@@ -142,20 +142,12 @@ ul li {
 
 .homeImage {
     background-color: white;
-    /* background-image: url("../img/home2.jpg"); */
+    background-image: url("../img/home2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
     clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 100% 100%, 50% 100%, 0 100%, 0% 70%, 0% 35%, 20% 10%);
 }
-
-.lazy-background {
-    background-image: url("../img/arroz-carne-2.jpg"); /* Placeholder image */
-  }
-  
-  .lazy-background.visible {
-    background-image: url("../img/home2.jpg"); /* The final image */
-  }
 
 .image_main {
     margin-top: 12vh;
