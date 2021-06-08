@@ -6,14 +6,55 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>PEC 2 Web y recursos multimedia</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap" rel="stylesheet"> -->
     <link rel="shortcut icon" href="../img/favicon.ico" />
+    <style>
+        /* source-serif-pro-200 - latin */
+        @font-face {
+            font-family: 'Source Serif Pro';
+            font-style: normal;
+            font-weight: 200;
+            src: url('../fonts/source-serif-pro-v11-latin-200.eot');
+            /* IE9 Compat Modes */
+            src: local(''),
+                url('../fonts/source-serif-pro-v11-latin-200.eot?#iefix') format('embedded-opentype'),
+                /* IE6-IE8 */
+                url('../fonts/source-serif-pro-v11-latin-200.woff2') format('woff2'),
+                /* Super Modern Browsers */
+                url('../fonts/source-serif-pro-v11-latin-200.woff') format('woff'),
+                /* Modern Browsers */
+                url('../fonts/source-serif-pro-v11-latin-200.ttf') format('truetype'),
+                /* Safari, Android, iOS */
+                url('../fonts/source-serif-pro-v11-latin-200.svg#SourceSerifPro') format('svg');
+            /* Legacy iOS */
+        }
+
+        /* source-serif-pro-300 - latin */
+        @font-face {
+            font-family: 'Source Serif Pro';
+            font-style: normal;
+            font-weight: 300;
+            src: url('../fonts/source-serif-pro-v11-latin-300.eot');
+            /* IE9 Compat Modes */
+            src: local(''),
+                url('../fonts/source-serif-pro-v11-latin-300.eot?#iefix') format('embedded-opentype'),
+                /* IE6-IE8 */
+                url('../fonts/source-serif-pro-v11-latin-300.woff2') format('woff2'),
+                /* Super Modern Browsers */
+                url('../fonts/source-serif-pro-v11-latin-300.woff') format('woff'),
+                /* Modern Browsers */
+                url('../fonts/source-serif-pro-v11-latin-300.ttf') format('truetype'),
+                /* Safari, Android, iOS */
+                url('../fonts/source-serif-pro-v11-latin-300.svg#SourceSerifPro') format('svg');
+            /* Legacy iOS */
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <div>
-            <a href="index.html"><img loading="lazy" srcset="../img/logo-no-text-320w.png 400w,
+            <a href="index.html"><img class="logo_img" width="150" height="150" loading="lazy" srcset="../img/logo-no-text-320w.png 400w,
                 ../img/logo-no-text-768w.png 700w,
                 ../img/logo-no-text-1024w.png 936w" sizes="(max-width: 480px) 100px,
                 (max-width: 768px) 120px,
@@ -122,7 +163,7 @@
         <div class='all_navigation'>
             <div>
                 <a href="index.html">
-                    <img loading="lazy" srcset="../img/logo-320w.png 400w,
+                    <img class="logo_img" width="100" height="100" loading="lazy" srcset="../img/logo-320w.png 400w,
                     ../img/logo-768w.png 700w,
                     ../img/logo-1024w.png 936w" sizes="(max-width: 480px) 100px,
                     (max-width: 768px) 120px,
