@@ -226,7 +226,7 @@ iframe {
 
 .receta picture {
     height: 400px;
-    width: 700px;
+    width: 400px;
     object-fit: cover;
 }
 
@@ -440,12 +440,6 @@ iframe {
 
 /* Mejoras PSI */
 
-/* .logo_img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 9/9;
-} */
-
 .logo_img {
     width: 150px;
     height: 150px;
@@ -646,6 +640,7 @@ div.youtube-play:hover{
     .receta img {
         max-height: 150px;
         max-width: 200px;
+        width: 150px;
     }
 
     .my-slider img {
