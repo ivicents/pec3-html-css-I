@@ -6,14 +6,185 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>PEC 2 Web y recursos multimedia</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"> -->
     <link rel="shortcut icon" href="../img/favicon.ico" />
+    <style>
+        .tns-outer {
+            padding: 0 !important
+        }
+
+        .tns-outer [hidden] {
+            display: none !important
+        }
+
+        .tns-outer [aria-controls],
+        .tns-outer [data-action] {
+            cursor: pointer
+        }
+
+        .tns-slider {
+            -webkit-transition: all 0s;
+            -moz-transition: all 0s;
+            transition: all 0s
+        }
+
+        .tns-slider>.tns-item {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        .tns-horizontal.tns-subpixel {
+            white-space: nowrap
+        }
+
+        .tns-horizontal.tns-subpixel>.tns-item {
+            display: inline-block;
+            vertical-align: top;
+            white-space: normal
+        }
+
+        .tns-horizontal.tns-no-subpixel:after {
+            content: '';
+            display: table;
+            clear: both
+        }
+
+        .tns-horizontal.tns-no-subpixel>.tns-item {
+            float: left
+        }
+
+        .tns-horizontal.tns-carousel.tns-no-subpixel>.tns-item {
+            margin-right: -100%
+        }
+
+        .tns-no-calc {
+            position: relative;
+            left: 0
+        }
+
+        .tns-gallery {
+            position: relative;
+            left: 0;
+            min-height: 1px
+        }
+
+        .tns-gallery>.tns-item {
+            position: absolute;
+            left: -100%;
+            -webkit-transition: transform 0s, opacity 0s;
+            -moz-transition: transform 0s, opacity 0s;
+            transition: transform 0s, opacity 0s
+        }
+
+        .tns-gallery>.tns-slide-active {
+            position: relative;
+            left: auto !important
+        }
+
+        .tns-gallery>.tns-moving {
+            -webkit-transition: all 0.25s;
+            -moz-transition: all 0.25s;
+            transition: all 0.25s
+        }
+
+        .tns-autowidth {
+            display: inline-block
+        }
+
+        .tns-lazy-img {
+            -webkit-transition: opacity 0.6s;
+            -moz-transition: opacity 0.6s;
+            transition: opacity 0.6s;
+            opacity: 0.6
+        }
+
+        .tns-lazy-img.tns-complete {
+            opacity: 1
+        }
+
+        .tns-ah {
+            -webkit-transition: height 0s;
+            -moz-transition: height 0s;
+            transition: height 0s
+        }
+
+        .tns-ovh {
+            overflow: hidden
+        }
+
+        .tns-visually-hidden {
+            position: absolute;
+            left: -10000em
+        }
+
+        .tns-transparent {
+            opacity: 0;
+            visibility: hidden
+        }
+
+        .tns-fadeIn {
+            opacity: 1;
+            filter: alpha(opacity=100);
+            z-index: 0
+        }
+
+        .tns-normal,
+        .tns-fadeOut {
+            opacity: 0;
+            filter: alpha(opacity=0);
+            z-index: -1
+        }
+
+        .tns-vpfix {
+            white-space: nowrap
+        }
+
+        .tns-vpfix>div,
+        .tns-vpfix>li {
+            display: inline-block
+        }
+
+        .tns-t-subp2 {
+            margin: 0 auto;
+            width: 310px;
+            position: relative;
+            height: 10px;
+            overflow: hidden
+        }
+
+        .tns-t-ct {
+            width: 2333.3333333%;
+            width: -webkit-calc(100% * 70 / 3);
+            width: -moz-calc(100% * 70 / 3);
+            width: calc(100% * 70 / 3);
+            position: absolute;
+            right: 0
+        }
+
+        .tns-t-ct:after {
+            content: '';
+            display: table;
+            clear: both
+        }
+
+        .tns-t-ct>div {
+            width: 1.4285714%;
+            width: -webkit-calc(100% / 70);
+            width: -moz-calc(100% / 70);
+            width: calc(100% / 70);
+            height: 10px;
+            float: left
+        }
+
+        /*# sourceMappingURL=sourcemaps/tiny-slider.css.map */
+    </style>
 </head>
 
 <body>
     <header>
         <div>
-            <a href="index.html"><img loading="lazy" srcset="../img/logo-no-text-320w.png 400w,
+            <a href="index.html"><img class="logo_img" width="150" height="150" loading="lazy" srcset="../img/logo-no-text-320w.png 400w,
                 ../img/logo-no-text-768w.png 700w,
                 ../img/logo-no-text-1024w.png 936w" sizes="(max-width: 480px) 100px, 
                 (max-width: 768px) 120px, 
@@ -79,22 +250,22 @@
                     cortar en cuartos las alcachofas. Las incorporamos a la paella.</p>
                 <picture>
                     <source media=" (max-width: 768px)" srcset="../img/arroz-verduras-2-320w.jpg">
-                    <source media="(min-width: 769px)" srcset="../img/arroz-verduras-2.jpg">
-                    <img loading="lazy" src="../img/arroz-verduras-2.jpg" alt="Judias, pimiento y calabacin">
+                    <source media="(min-width: 769px)" srcset="../img/arroz-verduras-2-detail.jpg">
+                    <img loading="lazy" src="../img/arroz-verduras-2-detail.jpg" alt="Judias, pimiento y calabacin">
                 </picture>
                 <p>Cortamos el medio pimiento que nos había sobrado en trozos pequeños. A continuación, rehogamos en
                     aceite de oliva el medio pimiento que nos había sobrado y una vez doradito, añadimos el
                     caldo de verduras.</p>
                 <picture>
                     <source type="image/avif" srcset="../img/paella-resultado-320w.avif 400w,
-                    ../img/paella-resultado.avif 700w,
-                    ../img/paella-resultado.avif 936w" />
+                    ../img/paella-resultado-detail.avif 700w,
+                    ../img/paella-resultado-detail.avif 936w" />
                     <source srcset="../img/paella-resultado-320w.jpg 400w,
                     ../img/paella-resultado.jpg 700w,
                     ../img/paella-resultado.jpg 936w" />
                     <img loading="lazy" src="../img/paella-resultado.jpg" sizes="(max-width: 480px) 200px, 
                     (max-width: 768px) 300px, 
-                    500px" alt="Resultado de la paella" />
+                    400px" alt="Resultado de la paella" />
                 </picture>
                 <p> A los 10 minutos de cocción, las verdurás estarán tiernas y el caldo de verduras habrá absorvido su
                     sabor. Ahora, añadimos el arroz en forma de cruz, repartimos de forma uniforme por toda la paella y
@@ -103,21 +274,21 @@
                     arroz. Luego solo queda emplatar y disfruta! </p>
                 <picture>
                     <source type="image/webp" srcset="../img/paella-resultado-2-320w.webp 400w,
-                        ../img/paella-resultado-2.webp 700w,
-                        ../img/paella-resultado-2.webp 936w" />
+                        ../img/paella-resultado-2-detail.webp 700w,
+                        ../img/paella-resultado-2-detail.webp 936w" />
                     <source srcset="../img/paella-resultado-2-320w.png 400w,
                         ../img/paella-resultado-2.png 700w,
                         ../img/paella-resultado-2.png 936w" />
                     <img loading="lazy" src="../img/paella-resultado-2.png" sizes="(max-width: 480px) 200px, 
-                        (max-width: 768px) 400px, 
-                        700px" alt="Resultado de la paella emplatada" />
+                        (max-width: 768px) 300px, 
+                        400px" alt="Resultado de la paella emplatada" />
                 </picture>
                 <p>
                     A continuación te dejo el vídeo por si quieres ver el proceso paso por paso:
                 </p>
-                <iframe loading="lazy" src="https://www.youtube.com/embed/gTk43yXWins"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <div class="contenedor">
+                    <div class="reproductor" data-id="gTk43yXWins"></div>
+                </div>
             </div>
         </section>
         <section>
@@ -127,21 +298,22 @@
             <div class="my-slider">
                 <div>
                     <a href="detail.html"><img loading="lazy" alt="Alcachofa y pulpo"
-                            src="../img/arroz-mixto.jpg" /></a>
+                            src="../img/arroz-mixto-slider.jpg" /></a>
                     <a class="bottom" href="detail.html">Alcachofa y pulpo</a>
                 </div>
                 <div>
                     <a href="detail.html"><img loading="lazy" alt="Alcachofa y pimiento"
-                            src="../img/arroz-verduras.jpg" /></a>
+                            src="../img/arroz-verduras-slider.jpg" /></a>
                     <a class="bottom" href="detail.html">Alcachofa y pimiento</a>
                 </div>
                 <div>
-                    <a href="detail.html"><img loading="lazy" alt="Alcachofa y judias" src="../img/home.jpg" /></a>
+                    <a href="detail.html"><img loading="lazy" alt="Alcachofa y judias"
+                            src="../img/home-slider.jpg" /></a>
                     <a class="bottom" href="detail.html">Alcachofa y judias</a>
                 </div>
                 <div>
                     <a href="detail.html"><img loading="lazy" alt="Rape y gambas"
-                            src="../img/arroz-pescado-3.jpg" /></a>
+                            src="../img/arroz-pescado-3-slider.jpg" /></a>
                     <a class="bottom" href="detail.html">Rape y gambas</a>
                 </div>
             </div>
@@ -151,7 +323,7 @@
         <div class='all_navigation'>
             <div>
                 <a href="index.html">
-                    <img loading="lazy" srcset="../img/logo-320w.png 400w,
+                    <img class="logo_img" width="100" height="100" loading="lazy" srcset="../img/logo-320w.png 400w,
                     ../img/logo-768w.png 700w,
                     ../img/logo-1024w.png 936w" sizes="(max-width: 480px) 100px, 
                     (max-width: 768px) 120px, 
@@ -174,7 +346,7 @@
             </div>
         </div>
     </footer>
-    <script async src="../javascript/index.js"></script>
+    <script defer src="../javascript/index.js"></script>
 </body>
 
 </html>
